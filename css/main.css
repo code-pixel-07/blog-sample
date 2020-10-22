@@ -58,11 +58,17 @@ body {
     height: 100vh;
 }
 
+#top .nav-container {
+    width: 100%;
+    background-color: var(--white);
+}
+
 #top nav{
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: 12vh;
-    background-color: #fff;
+    background-color: var(--white);
     justify-content: space-around;
     align-items: center;
 }
@@ -143,10 +149,34 @@ nav ul li a {
     color: #cd201f;
 }
 
+nav .collapse-menu {
+    display: none;
+}
+
+nav .collapse-menu i {
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+
 /* Media queries */
 
 @media screen and (max-width:1024px) {
+    #navbar {
+        display: inline;
+    }
     #nav-menu {
         display: none;
     }
+    #top nav {
+        justify-content: space-between;
+    }
+    nav .social-links {
+        display: none;
+    }
+    nav .collapse-menu {
+        display: inline;
+    }
+
+    
 }
