@@ -9,10 +9,10 @@
     --text:#444;
     --white:#fff;
     /* --nite:#104f55; */
-    --nite:rgba(248,156,63,1);
+    --nite:rgb(65, 65, 65);
     --poppins:'poppins',sans-serif;
 
-    --gradient: linear-gradient(90deg, rgba(248,156,63,1) 20%, rgba(221,42,123,1) 100%);
+    --gradient: linear-gradient(90deg, rgb(63, 220, 248) 20%, rgb(143, 221, 42) 100%);
 }
 
 /* Global Styling */
@@ -53,9 +53,10 @@ body {
     position: relative;
     background-image: url("../assets/Background-image.png");
     background-size: cover;
-    background-position: center;
+    background-position: top;
+    background-origin: border-box;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
 }
 
 #top .nav-container {
@@ -100,19 +101,7 @@ nav ul li a {
     font-size: 1rem;
     color: var(--text);
     padding: 12px 30px;
-}
-
-.banner {
-    color: #fff;
-    position: relative;
-    text-align: center;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.banner .banner-text h3 {
-    font-weight: 300;
+    transition: all .2s ease-in;
 }
 
 /* .social-links span {
@@ -157,6 +146,121 @@ nav .collapse-menu i {
     font-size: 1.75rem;
     cursor: pointer;
 }
+
+.banner {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner .banner-text h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    font-family: 'Montserratt';
+}
+.banner .banner-text h1 {
+    font-size: 3rem;
+}
+.banner .banner-text {
+    margin-bottom: 1.25em;
+}
+
+.btn-header {
+    transition: .3s ease;
+}
+
+.btn-header i{
+    display: none;
+}
+.btn-header:hover i {
+    display: inline;
+    margin-left: .8em;
+}
+
+
+
+/* Header Section end --------------------------------------------------------------------------------------------*/
+
+
+
+/* Blog / cards section started-----------------------------------------------------------------------------------*/
+
+#cards .blog {
+    /* background: url(../assets/Abract01.png) right no-repeat; */
+    background-size: 65%;
+    height: 100vh;
+    width: 100%;
+}
+
+#cards .blog .blog-post {
+    padding: 6rem 0;
+}
+#cards .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    margin: 3rem 2rem;
+    box-shadow: 5px 15px 20px rgba(0,0,0,.15);
+}
+
+#cards .blog-content .blog-title {
+    padding: 2.5rem 0;
+}
+
+#cards .blog-content span {
+    display: block;
+    margin-top: .8rem;
+}
+
+.container {
+    /* position: relative; */
+    margin: 0 5vw;
+}
+
+/* This is the custom class made in the owl library [.owl-nav] | changing the default styles of owl library*/
+.container .owl-nav {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    margin: 0 auto;
+}
+.owl-nav .owl-prev .owl-nav-prev, .owl-nav .owl-next .owl-nav-next {
+    color: var(--nite);
+    background: transparent;
+    font-size: 3em;
+}
+
+.owl-theme .owl-nav [class*='owl']:hover {
+    background: transparent;
+    color: var(--nite);
+}
+.owl-theme .owl-nav [class*='owl'] {
+    outline: none;
+}
+
+/* Blog / cards section started-----------------------------------------------------------------------------------*/
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media queries */
