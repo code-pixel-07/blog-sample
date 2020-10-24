@@ -9,10 +9,11 @@
     --text:#444;
     --white:#fff;
     /* --nite:#104f55; */
-    --nite:rgb(65, 65, 65);
+    --nite:rgb(167, 28, 120);
+    --seco: rgb(64, 121, 120);
     --poppins:'poppins',sans-serif;
 
-    --gradient: linear-gradient(90deg, rgb(63, 220, 248) 20%, rgb(143, 221, 42) 100%);
+    --gradient: linear-gradient(90deg, rgb(242, 63, 248) 20%, rgb(155, 42, 221) 100%);
 }
 
 /* Global Styling */
@@ -29,20 +30,34 @@ img {
 }
 
 .btn {
+    font-family: 'montserratt';
     margin-top: 1.5rem;
     color: #fff;
     padding: 10px 35px;
     border-radius: 12px;
     border: none;
-    background: rgb(248,156,63);
-    background: var(--gradient);
+    /* background: rgb(248,156,63); */
+    background: var(--seco);
     cursor: pointer;
     font-size: 1.5rem;
     transition: .3s ease;
 }
 
+#cta {
+    background: var(--gradient);
+}
+
 .active {
     color: var(--nite);
+}
+
+.text-grey {
+    color: var(--text);
+}
+
+p {
+    font-family: 'montaga';
+    color: var(--text);
 }
 
 body {
@@ -154,6 +169,7 @@ nav .collapse-menu i {
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
+    /* transition:all .3s cubic-bezier(1, 0.01, 0.11, 0.98); */
 }
 
 .banner .banner-text h3 {
@@ -166,10 +182,6 @@ nav .collapse-menu i {
 }
 .banner .banner-text {
     margin-bottom: 1.25em;
-}
-
-.btn-header {
-    transition: .3s ease;
 }
 
 .btn-header i{
@@ -211,6 +223,10 @@ nav .collapse-menu i {
     padding: 2.5rem 0;
 }
 
+.blog-content .blog-title h3, .blog-content .blog-title span {
+    color: var(--text);
+}
+
 #cards .blog-content span {
     display: block;
     margin-top: .8rem;
@@ -245,19 +261,55 @@ nav .collapse-menu i {
 /* Blog / cards section started-----------------------------------------------------------------------------------*/
 
 
-/**/
+/*Site Content ---------------------------------------------------------------------------------------------------*/
 
+#post-container .site-content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:70% 30%;
+}
 
+#post-container .site-content .post-content {
+    margin-bottom: 1rem;
+}
 
+#post-container .site-content .post-content > .post-image, .post-title {
+    position: relative;
+    padding: 1rem 2rem;
+}
+#post-container .site-content .post-content > .post-image .post-info {
+    background-color: var(--seco);
+    padding: 1rem 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 15vw;
+    border-radius: 35px;
+    color: var(--white);
+}
+/* This is set to overflow:hidden because when we scale the img on hover effect -- it goes outside its container ...
+so since we dont want that we set the overflow to hidden so it will behave exactly as we want it to be */
+#post-container .site-content .post-content > .post-image > div {
+    overflow: hidden;
+}
+#post-container .site-content .post-content > .post-image .img {
+    transition: .5s ease-in-out;
+    width: 100%;
+}
 
+#post-container .site-content .post-content > .post-image .img:hover {
+    transform: scale(1.1);
+}
 
-
-
-
-
-
-
-
+#post-container .site-content .post-content > .post-image .post-info span {
+    margin: 0 .5rem;
+}
+#post-container .site-content .post-content .post-title a {
+    /* font-family: var(--anton); */
+    font-family: 'Acme';
+    font-size: 1.75rem;
+}
 
 
 
