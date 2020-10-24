@@ -23,10 +23,15 @@ ul, ol {
 
 a {
     text-decoration: none;
+    color: #444;
 }
 
 img {
     max-width: 100%;
+}
+
+.flex-row{
+    display: flex;
 }
 
 .btn {
@@ -311,9 +316,23 @@ so since we dont want that we set the overflow to hidden so it will behave exact
     font-size: 1.75rem;
 }
 
+/* Pagination ------------- */
+#post-container .site-content .pagination{
+    justify-content: center;
+    margin: 4rem 0;
+}
 
-
-
+#post-container .site-content .pagination a {
+    padding: .6rem .9rem;
+    margin: 0 .5rem;
+    border-radius: 50rem;
+    font-family: 'nunito sans';
+}
+#post-container .site-content .pagination a.pages {
+    background: var(--text);
+    color: var(--white);
+    font-style: normal;
+}
 
 /* Media queries */
 
