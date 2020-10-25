@@ -67,6 +67,7 @@ p {
 
 body {
     font-family: var(--poppins);
+    overflow-x: hidden;
 }
 
 #top {
@@ -333,6 +334,59 @@ so since we dont want that we set the overflow to hidden so it will behave exact
     color: var(--white);
     font-style: normal;
 }
+
+
+/* Sidebar ------------------------------------ */
+#post-container .site-content .sidebar .category-list{
+    font-family: 'acme';
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+/* #post-container .site-content */
+.site-content > .sidebar .category-list .list-items {
+    background-color: var(--seco);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius:2rem;
+    color: var(--white);
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.site-content > .sidebar .category-list .list-items a {
+    color: var(--white);
+}
+
+/* Popular Posts Section ----------------------------------------- */
+.site-content .sidebar .popular-posts .post-content {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-posts h2 {
+    padding-top: 8rem;
+}
+/* Code that doesn't make anu sense to me now */
+.site-content .sidebar .popular-posts .post-info {
+    padding: .1rem .1rem !important;
+    bottom: 1rem !important;
+    left: 2rem !important;
+    border-radius:0rem !important;
+}
+
+.site-content .sidebar .popular-posts .post-title a {
+    font-size: 1rem !important;
+} 
+
+
+
+
+
+
+
+
+
 
 /* Media queries */
 
