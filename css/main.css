@@ -517,6 +517,10 @@ footer .to-top span {
     transition: all .2s ease;
 }
 
+footer .to-top span i {
+    font-size: 2rem;
+}
+
 footer .to-top span:hover {
     color: var(--nite);
     cursor: pointer;
@@ -529,6 +533,23 @@ footer .to-top span:hover {
 
 
 /* Media queries */
+
+@media only screen and (max-width:1130px) {
+    .site-content .post-content > .post-image .post-info {
+        left: 2rem !important;
+        font-size: 0.8rem ;
+        bottom: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .site-content .sidebar .popular-posts .post-info {
+        display: none !important;
+    }
+
+    footer .container {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
 
 @media screen and (max-width:1024px) {
     #navbar {
@@ -546,6 +567,70 @@ footer .to-top span:hover {
     nav .collapse-menu {
         display: inline;
     }
+}
 
+@media only screen and (max-width:750px) {
+    #post-container .site-content {
+        grid-template-columns: 100%;
+    }
+
+    footer .container {
+        grid-template-columns:repeat(1, 1fr);
+    }
+    footer .to-top {
+        top:82%;
+    }
+}
+
+@media only screen and (max-width:519px) {
+    #cards .blog {
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info {
+        display: none;
+    }
+
+    .site-content .sidebar .newsletter {
+        padding-top:1rem ;
+    }
     
+    .site-content .sidebar .popular-tags {
+        padding-bottom:2rem ;
+    }
+
+    footer .container > div {
+        padding: 2rem .9rem;
+    }
+
+    footer .right-side {
+        padding: .5rem 1rem;
+        text-align: center;
+        font-size: .8rem ;
+    }
+
+    footer .to-top{
+        top: 80% !important;
+    }
+    footer .to-top span {
+        font-size: 2rem;
+    }
+    .site-content .sidebar .popular-posts h2{
+        padding-top: 1.5rem;
+    }
+
+    .banner .banner-text h3{
+        font-size:1rem;
+    }
+    .banner .banner-text h1{
+        font-size:2rem;
+    }
+
+    #post-container .site-content .sidebar .category h2 {
+        padding-bottom:1rem ;
+    }
+
+    #post-container .site-content .sidebar .category-list {
+        margin-left: 10%;
+    }
 }
