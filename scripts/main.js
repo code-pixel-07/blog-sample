@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     // owl carousel
     $('.owl-carousel').owlCarousel({
@@ -7,5 +9,14 @@ $(document).ready(function () {
         dots:false, 
         nav:true,
         navText : [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
+        responsive:{}
     }) ;
+
+
+    // 
+    $(".to-top span").click(function () {
+        $("html, body").animate({
+            scrollTop:0
+        },1500)
+    })
 });
