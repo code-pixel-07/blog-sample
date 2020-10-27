@@ -1,4 +1,5 @@
 
+
 const responsive = {
     0: {
         items:1
@@ -22,7 +23,7 @@ $(document).ready(function () {
     // owl carousel
     $('.owl-carousel').owlCarousel({
         loop:true, 
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout: 2000,
         dots:false, 
         nav:true,
@@ -31,10 +32,13 @@ $(document).ready(function () {
     }) ;
 
 
-    // 
+    // back to top 
     $(".to-top span").click(function () {
         $("html, body").animate({
             scrollTop:0
         },1500)
     })
+
+    // animate on scroll
+    AOS.init();
 });
